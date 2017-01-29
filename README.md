@@ -1,6 +1,6 @@
 [![License](https://img.shields.io/badge/license-Public%20Domain-blue.svg)](https://github.com/tekezo/Karabiner-Elements/blob/master/LICENSE.md)
 
-[*This document is also available in German. / Dieses Dokument ist auch auf Deutsch verfügbar.*](https://github.com/jgosmann/Karabiner-Elements-Neo/blob/neo2-layer4/README.md)
+[*This document is also available in German. / Dieses Dokument ist auch auf Deutsch verfügbar.*](https://github.com/jgosmann/Karabiner-Elements-Neo/blob/neo2-layer4/README_de.md)
 
 # Karabiner-Elements-Neo
 
