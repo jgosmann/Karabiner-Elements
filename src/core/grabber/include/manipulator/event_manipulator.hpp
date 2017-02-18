@@ -233,13 +233,6 @@ public:
                              krbn::keyboard_type keyboard_type,
                              bool pressed) {
     krbn::key_code to_key_code = from_key_code;
-    if (from_key_code == krbn::key_code(43)) {
-        if (pressed) {
-            produce_tab_ = true;
-        }
-    } else {
-        produce_tab_ = false;
-    }
 
     // ----------------------------------------
     // modify keys
@@ -400,6 +393,7 @@ public:
           post_modifier_flag_event(krbn::key_code(225), keyboard_type, pressed);
           to_key_code = krbn::key_code::caps_lock;
       }
+
       
       
       //=== takahasix ============================================
@@ -409,6 +403,17 @@ public:
 
     // ----------------------------------------
     // Post input events to karabiner_event_dispatcher
+
+    if (from_key_code == krbn::key_code(43)) {
+        if (pressed) {
+            if (cmdLeft || cmdRight || opt || ctrl || fn) {
+                to_key_code = from_key_code;
+                tab_mapping_ = to_key_code;
+            }
+        } else {
+            to_key_code = tab_mapping_;
+        }
+    }
 
     if (to_key_code == krbn::key_code::caps_lock) {
       if (auto hid_system_key = krbn::types::get_hid_system_key(to_key_code)) {
@@ -429,13 +434,20 @@ public:
 
     if (post_modifier_flag_event(to_key_code, keyboard_type, pressed)) {
       key_repeat_manager_.stop();
-      if (produce_tab_ && !pressed) {
-          post_key(krbn::key_code(43), krbn::key_code(43), keyboard_type, true, false);
-          post_key(krbn::key_code(43), krbn::key_code(43), keyboard_type, false, false);
-          produce_tab_ = false;
+      if (from_key_code == krbn::key_code(43)) {
+          if (pressed) {
+              tab_mapping_ = to_key_code;
+              produce_tab_ = true;
+          } else if (produce_tab_) {
+              post_key(krbn::key_code(43), krbn::key_code(43), keyboard_type, true, false);
+              post_key(krbn::key_code(43), krbn::key_code(43), keyboard_type, false, false);
+              produce_tab_ = false;
+          }
       }
       return;
     }
+
+    produce_tab_ = false;
 
     post_key(from_key_code, to_key_code, keyboard_type, pressed, false);
 
@@ -853,6 +865,7 @@ private:
     std::map<ComplexKey, ComplexKey> modifyable_ck2ck_;
     bool shikakari_ = false;
     bool produce_tab_ = false;
+    krbn::key_code tab_mapping_;
     ComplexKey shikakariSrc_;
     ComplexKey shikakariDst_;
 
