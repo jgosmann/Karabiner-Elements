@@ -15,6 +15,13 @@ Beta – sollten Fehler auftreten oder Unklarheiten bzgl. der Installation
 bestehen, mache bitte [ein Github Issue](https://github.com/jgosmann/Karabiner-Elements-Neo/issues)
 auf (auf Englisch oder Deutsch).
 
+## Bekannte Probleme
+
+* Caps lock (aktiviert durch Drücken beider Shift-Tasten zur gleichen Zeit)
+  funktioniert unter Umständen nicht. Dies ist ein Problem vom ursprünglichen
+  Karabiner-Elemennts (tekezo/Karabiner-Elements#467). Für einige Nutzer lässt
+  sich das Problem beheben, in dem man den `karabiner_grabber` process beendet.
+
 ## Installation
 
 Karabiner-Elements-Neo steht bisher noch nicht als fertiges, installierbares

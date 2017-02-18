@@ -16,6 +16,12 @@ Beta, please report any bugs or incomplete installation instructions as
 [GitHub issues](https://github.com/jgosmann/Karabiner-Elements-Neo/issues). You
 may report issues in English or German.
 
+## Known issues
+
+* Caps lock (pressing both shift keys at the same time) might not work. This is
+  an upstream Karabiner-Elements issue (tekezo/Karabiner-Elements#467). Killing
+  the `karabiner_grabber` process is know to fix the problem in some instances.
+
 ## Installation
 
 I do not have an Apple Developer license at the moment that would me allow to
