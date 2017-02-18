@@ -37,6 +37,7 @@ Nach dem Bauen des Pakets folgt die eigentliche Installation und Konfiguration:
    * `backslash (\)` zu `right_option`
    * `caps_lock` zu `right_option`
    * ``grave_accent_and_tilde (`)`` zu `right_command`
+   * `right_option` zu `left_command`
 3. Installiere das Neo-Tastaturlayout (sofern noch nicht geschehen).
    Folge dazu der [Anleitung im Neo-Wiki](https://wiki.neo-layout.org/wiki/Neo%20auf%20dem%20Apple%20Macintosh%20einrichten),
    die hier in Kurzform wiedergegeben wird:

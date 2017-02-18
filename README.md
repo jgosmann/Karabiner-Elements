@@ -37,6 +37,7 @@ Once you have built the installable package:
    * `backslash (\)` to `right_option`
    * `caps_lock` to `right_option`
    * ``grave_accent_and_tilde (`)`` to `right_command`
+   * `right_option` to `left_command`
 3. Download the keyboard layout file and move it either to
    `~/Library/Keyboard Layouts` (personal installation) or 
    `/Library/Keyboard Layouts` (system-wide installation). You have the choice
