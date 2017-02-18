@@ -233,6 +233,13 @@ public:
                              krbn::keyboard_type keyboard_type,
                              bool pressed) {
     krbn::key_code to_key_code = from_key_code;
+    if (from_key_code == krbn::key_code(43)) {
+        if (pressed) {
+            produce_tab_ = true;
+        }
+    } else {
+        produce_tab_ = false;
+    }
 
     // ----------------------------------------
     // modify keys
@@ -422,6 +429,11 @@ public:
 
     if (post_modifier_flag_event(to_key_code, keyboard_type, pressed)) {
       key_repeat_manager_.stop();
+      if (produce_tab_ && !pressed) {
+          post_key(krbn::key_code(43), krbn::key_code(43), keyboard_type, true, false);
+          post_key(krbn::key_code(43), krbn::key_code(43), keyboard_type, false, false);
+          produce_tab_ = false;
+      }
       return;
     }
 
@@ -840,6 +852,7 @@ private:
     std::map<ComplexKey, ComplexKey> ck2ck_;
     std::map<ComplexKey, ComplexKey> modifyable_ck2ck_;
     bool shikakari_ = false;
+    bool produce_tab_ = false;
     ComplexKey shikakariSrc_;
     ComplexKey shikakariDst_;
 
