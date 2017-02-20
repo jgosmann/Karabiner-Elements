@@ -447,7 +447,9 @@ public:
       return;
     }
 
-    produce_tab_ = false;
+    if (pressed) {
+        produce_tab_ = false;
+    }
 
     post_key(from_key_code, to_key_code, keyboard_type, pressed, false);
 
