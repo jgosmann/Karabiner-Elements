@@ -34,7 +34,8 @@ Once you have built the installable package:
 
 1. Open the DMG file and follow the instructions.
 2. Open Karabiner-Elements and add the following “Simple Modifications”:
-   * `backslash (\)` to `right_option`
+   * `backslash (\)` to `right_option` (on some external keyboards it might be
+     necessary to remap `non_us_backslash` instead of `backslash (\)`)
    * `caps_lock` to `right_option`
    * ``grave_accent_and_tilde (`)`` to `right_command`
    * `right_option` to `left_command`

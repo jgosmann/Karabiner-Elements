@@ -34,7 +34,8 @@ Nach dem Bauen des Pakets folgt die eigentliche Installation und Konfiguration:
 
 1. Öffne die DMG-Datei und folge den Anweisungen des darin enthaltenen Installers.
 2. Öffne Karabiner-Elements and füge unter „Simple Modifications“ folgende Einträge hinzu:
-   * `backslash (\)` zu `right_option`
+   * `backslash (\)` zu `right_option` (bei manchen externen Tastaturen kann es
+     nötig sein `non_us_backslash` statt `backslash (\)` um zu belegen)
    * `caps_lock` zu `right_option`
    * ``grave_accent_and_tilde (`)`` zu `right_command`
    * `right_option` zu `left_command`
