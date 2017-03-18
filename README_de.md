@@ -21,6 +21,10 @@ auf (auf Englisch oder Deutsch).
   funktioniert unter Umständen nicht. Dies ist ein Problem vom ursprünglichen
   Karabiner-Elemennts (tekezo/Karabiner-Elements#467). Für einige Nutzer lässt
   sich das Problem beheben, in dem man den `karabiner_grabber` process beendet.
+* Einige Anwendungen und Webseiten erkennen falsche Tastenkombinationen für
+  bestimmte Shortcuts. Vermutlich lässt sich nicht viel dagegen tun, da in den
+  meisten Fällen die Anwendungen selber das Tastaturlayout nicht korrekt
+  beachten und häufig ist das Problem nicht mal Karabiner-Elements spezifisch.
 
 ## Installation
 

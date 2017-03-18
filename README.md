@@ -21,6 +21,11 @@ may report issues in English or German.
 * Caps lock (pressing both shift keys at the same time) might not work. This is
   an upstream Karabiner-Elements issue (tekezo/Karabiner-Elements#467). Killing
   the `karabiner_grabber` process is know to fix the problem in some instances.
+* Some applications and webpages might register some wrong key combinations for
+  certain shortcuts. There is probably not a lot that can be done about these
+  because it most cases it is the applications that are not considering the
+  keyboard layout correctly and in many cases the problem is not even specific
+  to Karabiner-Elements.
 
 ## Installation
 
