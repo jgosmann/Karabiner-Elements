@@ -1,5 +1,9 @@
 [![License](https://img.shields.io/badge/license-Public%20Domain-blue.svg)](https://github.com/tekezo/Karabiner-Elements/blob/master/LICENSE.md)
 
+**Dieses Projekt wird nicht mehr gewartet. Bitte verwende das originale
+[Karabiner-Elements](https://pqrs.org/osx/karabiner/) und installiere die [Neo2
+complex modifications](https://pqrs.org/osx/karabiner/complex_modifications/#neo2) stattdessen.**
+
 # Karabiner-Elements-Neo
 
 Karabiner-Elements-Neo implementiert die Ebenen 4 und 6 der

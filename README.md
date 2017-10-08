@@ -2,6 +2,10 @@
 
 [*This document is also available in German. / Dieses Dokument ist auch auf Deutsch verfügbar.*](https://github.com/jgosmann/Karabiner-Elements-Neo/blob/neo2-layer4/README_de.md)
 
+**This project is not maintained any longer. Please use the original
+[Karabiner-Elements](https://pqrs.org/osx/karabiner/) and install the [Neo2
+complex modifications](https://pqrs.org/osx/karabiner/complex_modifications/#neo2) instead.**
+
 # Karabiner-Elements-Neo
 
 Karabiner-Elements-Neo implements the layers 4 and 6 of the [Neo2 keyboard
